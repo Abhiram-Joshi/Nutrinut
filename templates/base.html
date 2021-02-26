@@ -1,0 +1,126 @@
+<!-- Background image on home page -->
+<!-- dropdown for mess in forms -->
+<!-- Home page image -->
+<!-- Show logged in user -->
+<!-- Extracting values from models for breafast,lunch,dinner -->
+<!-- Add gender -->
+
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+
+    <meta charset="utf-8">
+    <title>Nutrinut</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+
+
+    <style media="screen">
+
+      body
+      {
+        margin: 0;
+      }
+
+
+      .heading
+      {
+        font-family: 'Hachi Maru Pop', cursive;
+        font-size: 72px;
+      }
+
+      .text
+      {
+        font-family: 'Hachi Maru Pop', cursive;
+      }
+
+      body
+      {
+        background-color: #202020;
+        color: white;
+
+      }
+
+
+      .login-body
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .helptext
+      {
+        color:#636363;
+      }
+
+    </style>
+
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #202020;">
+      <!-- <a class="navbar-brand" href="#">Nutrinut</a> -->
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+
+          <!-- kjshdkajshdkjshdkajhdakjshdakjshdajk -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="{% url 'signup' %}">Signup</a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'menu' %}">Mess</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'restaurant' %}">Restaurant</a>
+          </li>
+
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+
+
+
+          {% else %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'signup' %}">Signup</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_login' %}">Login</a>
+          </li>
+
+          {% endif %}
+
+
+
+
+        </ul>
+      </div>
+    </nav>
+
+
+    {% block body %}
+    {% endblock %}
+
+
+
+  </body>
+</html>

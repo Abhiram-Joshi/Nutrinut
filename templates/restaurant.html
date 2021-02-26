@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1 class="display-1 text-center" style="color: gray;"><b><b>So it was your cheat day!</b></b></h1>
+<p class="text-muted text-center">Fill what you ate at the restaurant today!</p>
+
+
+
+
+
+
+
+<table style="table-layout: fixed;" width="100%" class="my-5">
+
+  <!-- <tr>
+
+    <td class="text-center">
+      Breakfast
+    </td>
+
+    <td class="text-center">
+      Lunch
+    </td>
+
+    <td class="text-center">
+      Dinner
+    </td>
+
+  </tr> -->
+
+
+
+
+  <tr>
+
+    <td class="" style="width: 33%; padding:20px; font-size:20px;">
+      Breakfast, the first meal of the day kick-starts your metabolism, helping you burn calories throughout the day. It also gives you the energy you need to get things done and helps you focus at work or at school. Those are just a few reasons why it’s the most important meal of the day.
+    </td>
+
+    <td class="" style="width: 33%; padding: 20px; font-size:20px;">
+      Lunch is an important meal for everyone. It provides energy and nutrients to keep the body and brain working efficiently through the afternoon. A packed lunch made at home can be a healthy and delicious choice and gives you control over the foods and ingredients included.
+    </td>
+
+    <td class="" style="width: 33%; padding:20px; font-size:20px;">
+      Dinner is the important meal in the daily or another cycle of meals. While rural households have tended to share the main daily meal during daylight hours, industrial societies have pushed dinner into the evening, thereby making this meal more important than breakfast, lunch or snack.
+    </td>
+  </tr>
+
+  <tr>
+
+    <td style="width: 33%; padding:20px;">
+      <center>
+        <a href="{% url 'rbreakfast' %}"> <button type="button" class="btn btn-outline-light btn-lg " name="button">Breakfast</button> </a>
+      </center>
+    </td>
+
+
+    <td style="width: 33%; padding:20px;">
+      <center>
+        <a href="{% url 'rlunch' %}"> <button type="button" class="btn btn-outline-light btn-lg " name="button">Lunch</button> </a>
+      </center>
+    </td>
+
+    <td style="width: 33%; padding:20px;">
+      <center>
+        <a href="{% url 'rdinner' %}"> <button type="button" class="btn btn-outline-light btn-lg " name="button">Dinner</button> </a>
+      </center>
+    </td>
+  </tr>
+
+</table>
+
+
+
+{% endblock %}

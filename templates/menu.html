@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+{% load static %}
+
+<!-- <img src="{% static 'images/orange.png' %}" style="position: absolute; TOP:20%; RIGHT:0px; WIDTH:auto; HEIGHT:100%;"> -->
+
+<div class="container">
+
+
+
+
+
+  <center> <h1 class="display-1 my-5"><b><b>VIT Mess</b></b></h1> </center>
+
+  <p style="font-size:20px;" class="my-5">VIT has different type of messes for freshers. In the first year the caterers for all the 5 types of messes are Darling Vellore and PR Vellore. There are Five Types of Messes in VIT for Freshers namely South Indian Veg, South Indian Non Veg, North Indian Veg and North Indian Non Veg and Special Mess.The Darling Special Mess and PR Special Mess are considered to be the best among all other messes. They serve a wide variety of items for breakfast, lunch and dinner. The quality of food here is good and the staff here keep up cleanliness.The mess here, serves exceptionally good food. Be assured you won’t face any problem with the food served here. The mess is run by Darling Caterers and the staff here make sure the food served is of great quality.People who are pure vegetarians from the north will have no problem with this mess, although being in the south, this mess serves delicious north vegetarian meals. The mess is run by PR caterers.The South Indian mess serves delicious items, with just a few differences from the north mess. If you want to save a bit, but still enjoy most of the items, then take this mess. The mess is run by Darling Caterers. The North Indian mess here, will make you feel just at home. Ideal for those who live in the north and crave for their kind of food in the south, this mess doesn’t disappoint. Overall, the food served at VIT is good, and much above the standards of the food served in other colleges. If at all there are any complaints regarding the food served, VIT takes them very seriously and almost immediate action is taken.</p>
+
+
+
+</div>
+
+
+
+  <center> <a href="{% url 'breakfast' %}"> <button type="button" class="btn btn-outline-light btn-lg my-5" name="button">What did you eat today?</button> </a> </center>
+
+
+
+
+{% endblock %}

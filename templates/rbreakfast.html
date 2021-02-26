@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+{% load static %}
+
+
+<h1 class="display-1 text-center" style="color: gray;"><b><b>Breakfast</b></b></h1>
+<p class="text-muted text-center">Fill what you ate for breakfast!</p>
+
+<center> <img src="{% static 'images/mess2.png' %}" style="HEIGHT:400px;" class="mb-5"> </center>
+
+<!-- <form class="" method="post">
+  {% csrf_token %}
+
+  {% for item in RBFoodForm.food %}
+
+    {{item}}
+    <br>
+
+  {% endfor %}
+
+  <input type="submit" class="btn btn-outline-info btn-lg" name="" value="Guppoo!!">
+
+</form> -->
+
+<form class="" method="post">
+  {% csrf_token %}
+
+
+  <div class="container">
+
+    {% for item in RBFoodForm.food %}
+
+      <h3>{{item}}</h3>
+      <br>
+
+    {% endfor %}
+
+  </div>
+
+  <center> <input type="submit" class="btn btn-outline-light btn-lg mb-5" name="" value="Check your calorie status!"> </center>
+
+</form>
+
+
+
+{% endblock %}

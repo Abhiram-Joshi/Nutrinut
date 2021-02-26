@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<center>
+
+{% if registered %}
+  <h1>Thank you for registering!</h1>
+
+{% else %}
+  <h1 class="display-1">Register Here!</h1>
+  <h1 class="display-4 my-5">Fill out the form</h1>
+  <br>
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="container">
+      {{ user_namepass_form.as_p }}
+      {{ user_profile_form.as_p }}
+
+
+    </div>
+
+    <input type="submit" class="btn btn-outline-light btn-lg my-5" value="Register">
+  </form>
+
+</center>
+
+{% endif %}
+{% endblock %}

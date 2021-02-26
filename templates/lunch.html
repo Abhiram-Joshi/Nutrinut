@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+{% load static %}
+
+<h1 class="display-1 text-center" style="color: gray;"><b><b>Lunch</b></b></h1>
+<p class="text-muted text-center">Fill what you ate for lunch!</p>
+
+<center> <img src="{% static 'images/lunch.png' %}" style="HEIGHT:500px;" class="mb-5"> </center>
+
+<form class="" method="post">
+  {% csrf_token %}
+
+
+  <div class="container">
+
+    {% for item in LFoodForm.food %}
+
+      <h3>{{item}}</h3>
+      <br>
+
+    {% endfor %}
+
+  </div>
+
+  <center> <input type="submit" class="btn btn-outline-light btn-lg mb-5" name="" value="Add what you ate for dinner!"> </center>
+
+</form>
+
+
+
+
+
+{% endblock %}
